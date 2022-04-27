@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form</title>
+  </head>
+  <body>
+    <script src="https://sandbox-innovation-innovation-3942-d-1806bebb5fd.cs27.force.com/lightning/lightning.out.js"></script>
+    <div data-lightning-out="true"></div>
+    <script>
+      const appName = 'c:hrRecruitmentApp';
+      const componentName = 'c:hrRecruitmentForm';
+      const lightningEndPointURI = 'https://sandbox-innovation-innovation-3942-d-1806bebb5fd.cs27.force.com/';
+      const targetElement = document.querySelector('[data-lightning-out]');
+      const componentAttributes = {};
+
+      $Lightning.use(
+          appName,
+          function() {
+              $Lightning.createComponent(
+                  componentName,
+                  componentAttributes,
+                  targetElement,
+                  function(cmp) {
+                      // callback when component is created and active on the page
+                      console.log('lwc created');
+                  }
+              );
+          },
+          lightningEndPointURI
+      );
+  </script>
+</html>
